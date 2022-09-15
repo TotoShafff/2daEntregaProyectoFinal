@@ -1,176 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-body{
-    background: rgb(143,108,152);
-    background: linear-gradient(90deg, rgba(143,108,152,1) 0%, rgba(51,0,255,1) 100%);
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+.nav-link {
+  color: white;
 }
 
-.gridIndex{
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
+.bi-facebook {
+  font-size: 25px;
+  color: white;
+}
+.bi-facebook:hover {
+  color: #3b5998;
 }
 
-
-
-.gridIntegrantes .img{
-
-    height: 550px;
+.bi-twitter {
+  font-size: 25px;
+  color: white;
+}
+.bi-twitter:hover {
+  color: #add8e6;
 }
 
-.bg-slider{
-    background-color: rgba(0,0,0,0.6);
-    padding: 20px;
+.bi-instagram {
+  font-size: 25px;
+  color: white;
+}
+.bi-instagram:hover {
+  color: #8a3ab9;
 }
 
-header{
-    grid-area: header;
-    margin-bottom: 80px;
-}
-main{
-    grid-area: main;
-    justify-self: center;
+div.img {
+  background-color: #6d8c9a;
 }
 
-footer{grid-area:footer ;
-    margin-top: 60px;
-    padding: 15px 0;
+.extendUno, h4, p, h3 {
+  color: white;
+  font-family: "Roboto";
 }
 
-footer p{
-    margin-bottom: 0px;
-}
-
-.navBar{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navLinks{
-    font-family: Anton;
-    list-style: none;
-    display: flex;
-    padding: 0;
-}
-
-.navItem{
-    display: inline-block;
-    padding: 10px  30px;
-}
-
-
-.loguito{
-    width: 250px;
-    height: auto;
-    display: inline-block;
-}
-
-a:link, a:visited, a:active, a:hover { 
-    text-decoration: none;
-    color: white; 
-}
-
-h1,p,h3{
-    color: white;
-}
-
-.iglogo{
-    height: 20px;
-    width: auto;
-}
-
-.containerFooter{
-    text-align: center;
-}
-
-.containerMain{
-    text-align: center;
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.disco{
-    text-align: center;
-    width: 350px;
-}
-
-.imagenDisco{
-    text-align: center;
-    margin: 30px 0px;
-}
-
-.containerButton{
-    margin: 16px;
-}
-
-.modButton{
-    background-color: white;
-    color: black;
-    border-radius: 15px;
-    height: 50px;
-    width: auto;
-    padding: 10px;
-    font-family: Roboto;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.formButton{
-    margin: 0px;
-    padding: 0px;
-}
-
-.suborden{
-    margin-top: 80px;
-}
-
-.margenButton{
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-
-.font-global{
-    font-family: "Permanent Marker";
-    font-size: 24px;
-
-}
-
-h1{
-    font-family: "Permanent Marker";
-}
-
-p{
-    font-family: Roboto;
-}
-/*-----------------------------------------Pagina Integrantes---------------------------------*/
-h3{
-    font-family: Roboto;
-}
-
-.bodyIntegrantes {
-  color: black;
+.extendDos, .h2Integrantes, h1 {
   font-family: "Permanent Marker";
+  color: white;
+  text-align: center;
 }
 
-.mainIntegrantes {
-  background-color: white;
-  width: 1146px;
+.extendTres, .containerMain {
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(143, 108, 152) 0%, rgb(51, 0, 255) 100%);
+}
+
+/*----------------------------------------- Index ---------------------------------*/
+.gridIndex {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+
+.gridIntegrantes .img {
+  height: 550px;
+}
+
+.bg-slider {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+  margin-bottom: 80px;
+}
+
+main {
+  grid-area: main;
+  justify-self: center;
+}
+
+footer {
+  grid-area: footer;
+  margin-top: 60px;
+  padding: 15px 0;
+}
+footer p {
+  margin-bottom: 0px;
+}
+
+.loguito {
+  width: 250px;
+  height: auto;
+  display: inline-block;
+}
+
+.containerFooter {
+  text-align: center;
+}
+
+.containerMain {
+  width: 1200px;
   margin: 0 auto;
-  min-height: 627px;
+}
+
+.disco {
+  text-align: center;
+  width: 350px;
+}
+
+.imagenDisco {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.containerButton {
+  margin: 16px;
+}
+
+.modButton {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  height: 50px;
+  width: auto;
+  padding: 10px;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.formButton {
+  margin: 0px;
+  padding: 0px;
+}
+
+.suborden {
+  margin-top: 80px;
+}
+
+.margenButton {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.font-global {
+  font-family: "Permanent Marker";
+  font-size: 24px;
 }
 
 .h2Integrantes {
   padding: 20px 0px;
-  text-align: center;
-  color: white;
 }
 
 .card {
@@ -182,177 +160,145 @@ h3{
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   background-color: black;
 }
-
-
 .card > img {
   border-radius: 2px;
   max-width: 100%;
   margin-bottom: 10px;
   height: auto;
 }
-
-.card h3 {
-  color: white;
-  font-family: Permanent Marker;
-}
-
 .card p {
-  color: white;
   line-height: 1.5;
   padding-top: 10px;
 }
 
-.h4Integrantes{
-  color: white;
-  font-family: Roboto;
+.mainContacto {
+  margin-bottom: 120px;
 }
 
-/*-----------------------------------------Pagina Contacto----------------------------------*/
-
-.mainContacto{
-    margin-bottom: 120px;
+.formContacto {
+  max-width: 420px;
+  margin: 50px auto;
 }
-
-.formContacto { 
-    max-width:420px; margin:50px auto; }
 
 .fbInput {
-  color:white;
+  color: white;
   font-family: Roboto;
-  font-weight:500;
+  font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border:2px solid white;
+  border: 2px solid white;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
-  outline:0;
+  outline: 0;
 }
-
-.fbInput:focus { border:2px solid white; }
+.fbInput:focus {
+  border: 2px solid white;
+}
 
 textarea {
   height: 150px;
   line-height: 150%;
-  resize:vertical;
+  resize: vertical;
 }
 
-[type="submit"] {
+[type=submit] {
   font-family: Roboto;
   width: 100%;
-  background:white;
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:black;
-  font-size:24px;
-  padding-top:3px;
-  padding-bottom:3px;
+  background: white;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: black;
+  font-size: 24px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
+  margin-top: -4px;
+  font-weight: 700;
 }
-[type="submit"]:hover { background:white; }
-
-.tituloContacto{
-    text-align: center;
+[type=submit]:hover {
+  background: white;
 }
 
-.raya{
-    padding-top: 100px;
+.tituloContacto {
+  text-align: center;
 }
 
-.moveForm{
-    padding-top: 30px;
+.moveForm {
+  padding-top: 30px;
 }
-
-/*------------------------------------------Pagina Discografia-----------------------------------------------------------------------------------*/
 
 div.img {
-    margin: 15px;
-    border: 2px solid #ccc;
-    height: 525px;
+  margin: 15px;
+  border: 2px solid white;
+  height: 525px;
 }
-
 div.img:hover {
-    border: 1px solid #777;
+  border: 1px solid #777;
 }
-
 div.img img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 div.desc {
-    padding: 15px;
-    text-align: center;
-    color: white;
-    font-family: Roboto;
-    font-size:15px;
-}
-
-.footerDisco{
-    padding-top: 600px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-family: Roboto;
+  font-size: 15px;
 }
 
 /*OTRA DESKTOP VERSION*/
-@media only screen and (max-width: 1024px){
-    
-    .container-fluid{
-        width: 100%;
-        display: flex;
-        flex-direction:column;
-        justify-content: space-between;
-        text-align: center;
-    }
-    
-    .imagenDisco{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .containerMain{
+@media only screen and (max-width: 1024px) {
+  .container-fluid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .imagenDisco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .containerMain {
     text-align: center;
     width: auto;
     padding: 0 24px;
-    }
-
-    .disco{
-        margin: 0 auto;
-    }
-
-    div.img{
-        height: auto;
-    }
+  }
+  .disco {
+    margin: 0 auto;
+  }
+  div.img {
+    height: auto;
+  }
 }
-
 /*MOBILE VERSION*/
-@media only screen and (max-width: 480px){
-    
-    .container-fluid{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .imagenDisco{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .containerMain{
-        text-align: center;
-        width: auto;
-        }
-}
+@media only screen and (max-width: 480px) {
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .imagenDisco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .containerMain {
+    text-align: center;
+    width: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

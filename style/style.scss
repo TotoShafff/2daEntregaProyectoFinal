@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+//SASS
+@import "variables.scss";
+
+// Variables ----------------------------------------------------------------------------------------------------------------------------------
+// Aplicación de las variables SASS en algunos lugares y incorporando anidación ----------------------------------------------------------------
+
+//Mixin --------------------------------------------------------------------
+@mixin redes ($hover){
+	font-size: 25px;
+	color: white;
+	&:hover{
+		color: $hover;
+	}
+}
+
+.nav-link{
+	color: white;
+}
+
+.bi-facebook{
+	@include redes($fb)
+}
+
+.bi-twitter{
+	@include redes($tw)
+}
+
+.bi-instagram{
+	@include redes($insta)
+}
+//------------------------------------------------------------------------------------
+//Mapas y Map-Get --------------------------------------------------------------------
+$coloresFondo: (
+		fondo1: #6d8c9a,
+		fondo2: lightblue,
+		fondo3: pink
+);
+
+div.img{
+	background-color: map-get($coloresFondo, fondo1 );
+}
+//--------------------------------------------------------
+.extendUno{
+	color: $color-letra;
+    font-family: $fuente-roboto;
+}
+
+.extendDos{
+	font-family: $fuente-blink;
+    color: $color-letra;
+    text-align: $texto-en-el-medio;
+}
+
+.extendTres{
+	text-align: center;
+}
+
+body{
+    background: $color-del-bg;
+}
+
+h1{
+	@extend .extendDos;
+}
+
+.h2Integrantes{
+    @extend .extendDos;
+}
+
+h3{
+    @extend .extendUno;
+}
+
+p{
+    @extend .extendUno;
+}
+
+h4{
+    @extend .extendUno;
+}
+/*----------------------------------------- Index ---------------------------------*/
+.gridIndex {
+	display: grid;
+	grid-template-areas: "header" "main" "footer";
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
+}
+.gridIntegrantes {
+	.img {
+		height: 550px;
+	}
+}
+.bg-slider {
+	background-color: rgba(0,0,0,0.6);
+	padding: 20px;
+}
+header {
+	grid-area: header;
+	margin-bottom: 80px;
+}
+main {
+	grid-area: main;
+	justify-self: center;
+}
+footer {
+	grid-area: footer;
+	margin-top: 60px;
+	padding: 15px 0;
+	p {
+		margin-bottom: 0px;
+	}
+}
+.loguito {
+	width: 250px;
+	height: auto;
+	display: inline-block;
+}
+
+.containerFooter {
+	text-align: center;
+}
+.containerMain {
+	@extend .extendTres;
+	width: 1200px;
+	margin: 0 auto;
+}
+.disco {
+	text-align: center;
+	width: 350px;
+}
+.imagenDisco {
+	text-align: center;
+	margin: 30px 0px;
+}
+.containerButton {
+	margin: 16px;
+}
+.modButton {
+	background-color: white;
+	color: black;
+	border-radius: 15px;
+	height: 50px;
+	width: auto;
+	padding: 10px;
+	font-family: Roboto;
+	font-size: 17px;
+	font-weight: 700;
+}
+.formButton {
+	margin: 0px;
+	padding: 0px;
+}
+.suborden {
+	margin-top: 80px;
+}
+.margenButton {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.font-global {
+	font-family: "Permanent Marker";
+	font-size: 24px;
+}
+
+//-----------------------------------------Pagina Integrantes---------------------------------
+
+.h2Integrantes {
+	padding: 20px 0px;
+}
+.card {
+	width: 320px;
+	padding: 20px;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 2px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: black;
+	>img {
+		border-radius: 2px;
+		max-width: 100%;
+		margin-bottom: 10px;
+		height: auto;
+	}
+	p {
+		line-height: 1.5;
+		padding-top: 10px;
+	}
+}
+
+//-----------------------------------------Pagina Contacto----------------------------------
+
+.mainContacto {
+	margin-bottom: 120px;
+}
+.formContacto {
+	max-width: 420px;
+	margin: 50px auto;
+}
+.fbInput {
+	color: white;
+	font-family: Roboto;
+	font-weight: 500;
+	font-size: 18px;
+	border-radius: 5px;
+	line-height: 22px;
+	background-color: transparent;
+	border: 2px solid white;
+	transition: all 0.3s;
+	padding: 13px;
+	margin-bottom: 15px;
+	width: 100%;
+	box-sizing: border-box;
+	outline: 0;
+	&:focus {
+		border: 2px solid white;
+	}
+}
+textarea {
+	height: 150px;
+	line-height: 150%;
+	resize: vertical;
+}
+[type="submit"] {
+	font-family: Roboto;
+	width: 100%;
+	background: white;
+	border-radius: 5px;
+	border: 0;
+	cursor: pointer;
+	color: black;
+	font-size: 24px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	transition: all 0.3s;
+	margin-top: -4px;
+	font-weight: 700;
+	&:hover {
+		background: white;
+	}
+}
+.tituloContacto {
+	text-align: center;
+}
+.moveForm {
+	padding-top: 30px;
+}
+
+//------------------------------------------Pagina Discografia-----------------------------------------------------------------------------------
+
+div.img {
+	margin: 15px;
+	border: 2px solid white;
+	height: 525px;
+	&:hover {
+		border: 1px solid #777;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+div.desc {
+	padding: 15px;
+	text-align: center;
+	color: white;
+	font-family: Roboto;
+	font-size: 15px;
+}
+
+/*OTRA DESKTOP VERSION*/
+@media only screen and (max-width: 1024px){
+    
+    .container-fluid{
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        text-align: center;
+    }
+    
+    .imagenDisco{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .containerMain{
+    text-align: center;
+    width: auto;
+    padding: 0 24px;
+    }
+
+    .disco{
+        margin: 0 auto;
+    }
+
+    div.img{
+        height: auto;
+    }
+}
+
+/*MOBILE VERSION*/
+@media only screen and (max-width: 480px){
+    
+    .container-fluid{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .imagenDisco{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .containerMain{
+        text-align: center;
+        width: auto;
+        }
+}
