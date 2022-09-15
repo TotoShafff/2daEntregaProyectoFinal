@@ -2,38 +2,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 //SASS
+@import "variables.scss";
+
 // Variables ----------------------------------------------------------------------------------------------------------------------------------
 // Aplicación de las variables SASS en algunos lugares y incorporando anidación ----------------------------------------------------------------
+
+//Mixin --------------------------------------------------------------------
+@mixin redes ($hover){
+	font-size: 25px;
+	color: white;
+	&:hover{
+		color: $hover;
+	}
+}
+
+.nav-link{
+	color: white;
+}
+
+.bi-facebook{
+	@include redes($fb)
+}
+
+.bi-twitter{
+	@include redes($tw)
+}
+
+.bi-instagram{
+	@include redes($insta)
+}
+//------------------------------------------------------------------------------------
+//Mapas y Map-Get --------------------------------------------------------------------
+$coloresFondo: (
+		fondo1: #6d8c9a,
+		fondo2: lightblue,
+		fondo3: pink
+);
+
+div.img{
+	background-color: map-get($coloresFondo, fondo1 );
+}
+//--------------------------------------------------------
+.extendUno{
+	color: $color-letra;
+    font-family: $fuente-roboto;
+}
+
+.extendDos{
+	font-family: $fuente-blink;
+    color: $color-letra;
+    text-align: $texto-en-el-medio;
+}
+
+.extendTres{
+	text-align: center;
+}
 
 body{
     background: $color-del-bg;
 }
 
 h1{
-    color: $color-letra;
-    font-family: $fuente-blink;
-    text-align: $texto-en-el-medio;
+	@extend .extendDos;
 }
 
 .h2Integrantes{
-    font-family: $fuente-blink;
-    color: $color-letra;
-    text-align: $texto-en-el-medio;
+    @extend .extendDos;
 }
 
 h3{
-    color: $color-letra;
-    font-family: $fuente-roboto;
+    @extend .extendUno;
 }
 
 p{
-    color: $color-letra;
-    font-family: $fuente-roboto;
+    @extend .extendUno;
 }
 
 h4{
-    color: $color-letra;
-    font-family: $fuente-roboto;
+    @extend .extendUno;
 }
 /*----------------------------------------- Index ---------------------------------*/
 .gridIndex {
@@ -72,29 +118,12 @@ footer {
 	height: auto;
 	display: inline-block;
 }
-a {
-	&:link {
-		text-decoration: none;
-		color: white;
-	}
-	&:visited {
-		text-decoration: none;
-		color: white;
-	}
-	&:active {
-		text-decoration: none;
-		color: white;
-	}
-	&:hover {
-		text-decoration: none;
-		color: white;
-	}
-}
+
 .containerFooter {
 	text-align: center;
 }
 .containerMain {
-	text-align: center;
+	@extend .extendTres;
 	width: 1200px;
 	margin: 0 auto;
 }
@@ -136,7 +165,7 @@ a {
 	font-size: 24px;
 }
 
-/*-----------------------------------------Pagina Integrantes---------------------------------*/
+//-----------------------------------------Pagina Integrantes---------------------------------
 
 .h2Integrantes {
 	padding: 20px 0px;
@@ -161,7 +190,7 @@ a {
 	}
 }
 
-/*-----------------------------------------Pagina Contacto----------------------------------*/
+//-----------------------------------------Pagina Contacto----------------------------------
 
 .mainContacto {
 	margin-bottom: 120px;
@@ -219,11 +248,11 @@ textarea {
 	padding-top: 30px;
 }
 
-/*------------------------------------------Pagina Discografia-----------------------------------------------------------------------------------*/
+//------------------------------------------Pagina Discografia-----------------------------------------------------------------------------------
 
 div.img {
 	margin: 15px;
-	border: 2px solid #ccc;
+	border: 2px solid white;
 	height: 525px;
 	&:hover {
 		border: 1px solid #777;

@@ -1,34 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+.nav-link {
+  color: white;
+}
+
+.bi-facebook {
+  font-size: 25px;
+  color: white;
+}
+.bi-facebook:hover {
+  color: #3b5998;
+}
+
+.bi-twitter {
+  font-size: 25px;
+  color: white;
+}
+.bi-twitter:hover {
+  color: #add8e6;
+}
+
+.bi-instagram {
+  font-size: 25px;
+  color: white;
+}
+.bi-instagram:hover {
+  color: #8a3ab9;
+}
+
+div.img {
+  background-color: #6d8c9a;
+}
+
+.extendUno, h4, p, h3 {
+  color: white;
+  font-family: "Roboto";
+}
+
+.extendDos, .h2Integrantes, h1 {
+  font-family: "Permanent Marker";
+  color: white;
+  text-align: center;
+}
+
+.extendTres, .containerMain {
+  text-align: center;
+}
+
 body {
   background: linear-gradient(90deg, rgb(143, 108, 152) 0%, rgb(51, 0, 255) 100%);
-}
-
-h1 {
-  color: white;
-  font-family: "Permanent Marker";
-  text-align: center;
-}
-
-.h2Integrantes {
-  font-family: "Permanent Marker";
-  color: white;
-  text-align: center;
-}
-
-h3 {
-  color: white;
-  font-family: "Roboto";
-}
-
-p {
-  color: white;
-  font-family: "Roboto";
-}
-
-h4 {
-  color: white;
-  font-family: "Roboto";
 }
 
 /*----------------------------------------- Index ---------------------------------*/
@@ -73,29 +93,11 @@ footer p {
   display: inline-block;
 }
 
-a:link {
-  text-decoration: none;
-  color: white;
-}
-a:visited {
-  text-decoration: none;
-  color: white;
-}
-a:active {
-  text-decoration: none;
-  color: white;
-}
-a:hover {
-  text-decoration: none;
-  color: white;
-}
-
 .containerFooter {
   text-align: center;
 }
 
 .containerMain {
-  text-align: center;
   width: 1200px;
   margin: 0 auto;
 }
@@ -145,7 +147,6 @@ a:hover {
   font-size: 24px;
 }
 
-/*-----------------------------------------Pagina Integrantes---------------------------------*/
 .h2Integrantes {
   padding: 20px 0px;
 }
@@ -170,7 +171,6 @@ a:hover {
   padding-top: 10px;
 }
 
-/*-----------------------------------------Pagina Contacto----------------------------------*/
 .mainContacto {
   margin-bottom: 120px;
 }
@@ -233,10 +233,9 @@ textarea {
   padding-top: 30px;
 }
 
-/*------------------------------------------Pagina Discografia-----------------------------------------------------------------------------------*/
 div.img {
   margin: 15px;
-  border: 2px solid #ccc;
+  border: 2px solid white;
   height: 525px;
 }
 div.img:hover {
