@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 //SASS
-@import "variables.scss";
+@import "_variables.scss";
 
 // Variables ----------------------------------------------------------------------------------------------------------------------------------
 // Aplicación de las variables SASS en algunos lugares y incorporando anidación ----------------------------------------------------------------
@@ -307,7 +307,13 @@ div.desc {
 /*MOBILE VERSION*/
 @media only screen and (max-width: 480px){
     
-    .container-fluid{
+    .loguito {
+		width: 250px;
+		height: auto;
+		display: inline-block;
+	}
+	
+	.container-fluid{
         display: flex;
         flex-direction:column;
         justify-content: center;
@@ -326,4 +332,18 @@ div.desc {
         text-align: center;
         width: auto;
         }
+
+	.mainContacto{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.carousel-item{
+		width: 100%;
+	}
+
+	.carousel-caption{
+		width: 100% 
+		margin 0;
+	}
 }
