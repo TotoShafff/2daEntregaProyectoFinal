@@ -284,6 +284,11 @@ div.desc {
 }
 /*MOBILE VERSION*/
 @media only screen and (max-width: 480px) {
+  .loguito {
+    width: 250px;
+    height: auto;
+    display: inline-block;
+  }
   .container-fluid {
     display: flex;
     flex-direction: column;
