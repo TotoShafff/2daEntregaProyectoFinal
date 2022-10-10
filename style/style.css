@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
-.nav-link {
+.formContacto label {
+  color: white;
+  font-size: 18px;
+}
+
+.nav-links {
   color: white;
 }
 
@@ -48,7 +53,11 @@ div.img {
 }
 
 body {
-  background: linear-gradient(90deg, rgb(143, 108, 152) 0%, rgb(51, 0, 255) 100%);
+  position: relative;
+  background-image: url("../assets/bgtour.png"), linear-gradient(90deg, rgb(143, 108, 152) 0%, rgb(51, 0, 255) 100%);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
 }
 
 /*----------------------------------------- Index ---------------------------------*/
@@ -254,6 +263,31 @@ div.desc {
   font-size: 15px;
 }
 
+#tours-list {
+  color: white;
+  padding-top: 40px;
+}
+
+#tours-list a {
+  padding: 12px 20px;
+  color: white;
+  border: 1px solid;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+#tours-list a:hover {
+  background-color: white;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.fontDMedium {
+  font-family: "Permanent Marker";
+  font-size: 22px;
+}
+
 /*OTRA DESKTOP VERSION*/
 @media only screen and (max-width: 1024px) {
   .container-fluid {
@@ -284,6 +318,11 @@ div.desc {
 }
 /*MOBILE VERSION*/
 @media only screen and (max-width: 480px) {
+  .loguito {
+    width: 250px;
+    height: auto;
+    display: inline-block;
+  }
   .container-fluid {
     display: flex;
     flex-direction: column;

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 //SASS
-@import "_variables.scss";
+@import "variables.scss";
 
 // Variables ----------------------------------------------------------------------------------------------------------------------------------
 // Aplicación de las variables SASS en algunos lugares y incorporando anidación ----------------------------------------------------------------
@@ -16,7 +16,12 @@
 	}
 }
 
-.nav-link{
+.formContacto label{
+	color: white;
+	font-size: 18px;
+}
+
+.nav-links{
 	color: white;
 }
 
@@ -59,7 +64,11 @@ div.img{
 }
 
 body{
-    background: $color-del-bg;
+    position: relative;
+    background-image: url("../assets/bgtour.png"), linear-gradient(90deg, rgba(143,108,152,1) 0%, rgba(51,0,255,1) 100%);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
 }
 
 h1{
@@ -268,6 +277,32 @@ div.desc {
 	color: white;
 	font-family: Roboto;
 	font-size: 15px;
+}
+
+//------------------------------------------Pagina Tour------------------------------------------------------------------------------------------
+#tours-list{
+    color: white;
+    padding-top: 40px;
+}
+
+#tours-list a{
+    padding: 12px 20px;
+    color: white;
+    border: 1px solid;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+#tours-list a:hover{
+    background-color: white;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.fontDMedium{
+    font-family: $fuente-blink;
+    font-size: 22px;
 }
 
 /*OTRA DESKTOP VERSION*/
