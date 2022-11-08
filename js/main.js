@@ -16,3 +16,5 @@ while (repetir){
         coincidir = (edad <= ingresoPag);
     }
 }
+
+

@@ -1,0 +1,70 @@
+const recitales = [
+    {
+        id: 1,
+        fecha: "Dom Sep 25",
+        pais: "Louisville Kentucky, Estados Unidos",
+        lugar: "Louder Than Life Festival",
+        tickets: "Disponibles",
+    },
+    {
+        id: 2,
+        fecha: "Dom Oct 9",
+        pais: "Austin Texas, Estados Unidos",
+        lugar: "Austin City Limits Music Festival",
+        tickets: "Disponibles",
+    },
+    {
+        id: 3,
+        fecha: "Dom Oct 16",
+        pais: "Austin Texas, Estados Unidos",
+        lugar: "Austin City Limits Music Festival",
+        tickets: "Disponibles",
+    },
+    {
+        id: 4,
+        fecha: "Sáb Ene 21",
+        pais: "Nueva Zelanda",
+        lugar: "Mt. Smart Stadium",
+        tickets: "Disponibles",
+    },
+    {
+        id: 5,
+        fecha: "Jue Ene 26",
+        pais: "Nueva Zelanda",
+        lugar: "Forsyth Barr Stadium",
+        tickets: "Disponibles",
+    },
+    {
+        id: 6,
+        fecha: "Dom Ene 29",
+        pais: "Australia",
+        lugar: "Suncorp Stadium",
+        tickets: "Disponibles",
+    },
+    {
+        id: 7,
+        fecha: "Jue Feb 02",
+        pais: "Australia",
+        lugar: "Accor Stadium",
+        tickets: "Disponibles",
+    },
+    {
+        id: 8,
+        fecha: "Miérc Feb 07",
+        pais: "Australia",
+        lugar: "Marvel Stadium",
+        tickets: "Agotados",
+    },
+    {
+        id: 9,
+        fecha: "Dom Feb 12",
+        pais: "Australia",
+        lugar: "Optus Stadium",
+        tickets: "Agotados",
+    },
+];
+
+// Find //
+    let buscador = "Australia"
+    const busqueda = recitales.find(recitales => recitales.pais === buscador)
+    console.log(busqueda)
