@@ -1,7 +1,8 @@
 //Interacción Usuario//
 const edad = 18;
 
-const entrada = alert ("Bienvenido al Blog #1 de Blink-182, aca vas a poder enterarte de las ultimas noticias, reproducir todas sus canciones e informarte acerca de sus tours programados; Recuerda que para obtener entradas debes ser mayor de 18 anios​");
+const entrada = alert("Bienvenido al Blog #1 de Blink-182, aca vas a poder enterarte de las ultimas noticias, reproducir todas sus canciones e informarte acerca de sus tours programados; Recuerda que para obtener entradas debes ser mayor de 18 anios​");
+
 let ingreso = parseInt( prompt ("Ingrese su edad."));
 let repetir = true;
 
@@ -10,7 +11,7 @@ function coincide (ingreso) {
 };
 
 if (coincide(ingreso)) {
-    alert ("Bien, apurate a buscar las tuyas!​");
+    Swal.fire("Bien, apurate a buscar las tuyas!​");
     repetir = false;
 }
 while (repetir){
@@ -18,13 +19,36 @@ while (repetir){
         ingreso = parseInt(prompt("Por favor, ingrese un número válido​"));
         continue
     }else if(coincide(ingreso)) {
-        alert ("Bien, apurate a buscar las tuyas!​");
+        Swal.fire("Bien, apurate a buscar las tuyas!​");
         repetir = false;
     }else{ 
-        alert ("Usted no es mayor de edad, no podra reservar entradas​");
+        Swal.fire("Usted no es mayor de edad, no podra reservar entradas​");
         repetir = false;
     }
 }
+
+
+
+// Fetch //
+fetch("../DataBase/DB.json")
+.then((res) => res.json())
+.then((data) => {
+    data.forEach((post) => {
+    const listado = (document.getElementById("app").innerHTML += `
+    <div class="row pb-5">
+        <div class="col-md-3 text-center">
+            <span class="fontDMedium">${post.fecha}</span><br />
+        </div>
+        <div class="col-md-3 text-center">
+            <span class="fontDMedium">${post.pais}</span><br />${post.lugar}
+        </div>
+        <div class="col-md-3 text-center d-flex align-items-center justify-content-center">
+            <a href="https://bit.ly/ltl2022" class="btn-tickets mt-2" target="_blank">Tickets</a>
+        </div>
+        <button id="BInfo2" class="col-md-3 btn-tickets mt-2">+INFO</button>
+    </div>`);
+    });
+});
 
 // Array //
 const recitales = [
@@ -129,7 +153,7 @@ formSoli.style.display = 'block';
 });
 
 document.getElementById('EnviarSolicitud').onclick = function(){
-alert('Gracias, pronto recibiras mas informacion sobre el recital!');
+Swal.fire('Gracias, pronto recibiras mas informacion sobre el recital!');
 } 
 
 // JSON STORAGE 
@@ -171,4 +195,4 @@ return InfoRecitalBlink;
 
 function localStorageInfoRecitalBlink(plist){
 localStorage.setItem('localInfoRecitalBlink', JSON.stringify(plist));
-} 
+}
